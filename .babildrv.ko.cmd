@@ -1,0 +1,1 @@
+cmd_/home/daq/daqconfig/exp/tmb_test/babildrv.ko := ld -m elf_i386 -m elf_i386 -r -o /home/daq/daqconfig/exp/tmb_test/babildrv.ko /home/daq/daqconfig/exp/tmb_test/babildrv.o /home/daq/daqconfig/exp/tmb_test/babildrv.mod.o
