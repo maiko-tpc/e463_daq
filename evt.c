@@ -108,10 +108,8 @@ void evt(void){
   /* readout of MADC32 */
 #ifdef USE_MADC
   init_segment(MKSEGID(RCNPEN,F3,SSDE,MADC32));
-  rpv130_map_pulse(0x40, RPV130MAPN);
   madc32_map_segdata(MADC32_MAPN);
-  //  madc32_map_dma_segdata(1, MADC32_MAPN); // not work
-  rpv130_map_pulse(0x40, RPV130MAPN);
+  //  madc32_map_dma_segdata(1, MADC32_MAPN); // DMA not work
   end_segment();
   
   madc32_map_fifo_reset(MADC32_MAPN);
@@ -130,7 +128,6 @@ void evt(void){
 
   /* readout of TMB2 */
 #ifdef USE_TMB2
-  //  rpv130_map_pulse(0x20,RPV130MAPN); 
   // anode 0
   init_segment(MKSEGID(RCNPEN,F3,44,TMB2)); 
   tmb2_multi_map_dmasegdata(TMB2_DMAN[0][0], TMB2_OFF[0],0,
@@ -155,11 +152,6 @@ void evt(void){
 			    depth[2][1], TMB2_MAPN);
   end_segment();
 
-//  int i;
-//  for(i=0; i<500; i++){
-//    delay_us();
-//  }
-//  rpv130_map_pulse(0x20,RPV130MAPN);      
 #endif
 
  if(!mpflag){

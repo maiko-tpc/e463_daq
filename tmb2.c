@@ -82,7 +82,10 @@ int tmb2_multi_map_dmasegdata(unsigned long ndma, int offset,
 			      int icn, long depth, int nmap){
   int dmacnt;
   dmacnt = depth*4;
-  if(dmacnt>DMASIZE) dmacnt=DMASIZE;
+  if(dmacnt>DMASIZE){
+    dmacnt=DMASIZE;
+    printk("Too many data in TMB2!! mem:%d port:%d\n", offset, icn);
+  }
   //  return univ_dma_segdata(dmacnt, ndma); // data structure is bad
   return univ_dma_segdata_tmb(dmacnt, ndma); // changed on 17/09/03
 }

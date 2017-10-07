@@ -1,2 +1,2 @@
-/home/daq/daqconfig/exp/tmb_test/babildrv.ko
-/home/daq/daqconfig/exp/tmb_test/babildrv.o
+/home/daq/daqconfig/exp/e463/babildrv.ko
+/home/daq/daqconfig/exp/e463/babildrv.o

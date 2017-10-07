@@ -51,4 +51,4 @@ __attribute__((section(".modinfo"))) =
 "depends=bb-sva041";
 
 
-MODULE_INFO(srcversion, "B99E9DBA2E2CECEF4CF8259");
+MODULE_INFO(srcversion, "6B152C0246C33A191EB10E4");
